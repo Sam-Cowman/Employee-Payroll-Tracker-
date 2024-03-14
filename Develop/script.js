@@ -50,7 +50,7 @@ while (true) {
     if (!isNaN(number)) {
         numbers.push(number);
     } else {
-        alert("Please enter a valid number.");
+        alert("Please enter salary.");
     }
 }
 

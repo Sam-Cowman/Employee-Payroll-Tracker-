@@ -36,7 +36,29 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  // Use a temperal literal string 
+  // Use a tempelate literal string 
+
+const numbers = [];
+
+let input;
+while (true) {
+    input = prompt("Enter a number (or type 'exit' to finish):");
+    if (input === 'exit' || input === null) {
+        break;
+    }
+    const number = parseFloat(input);
+    if (!isNaN(number)) {
+        numbers.push(number);
+    } else {
+        alert("Please enter a valid number.");
+    }
+}
+
+const sum = numbers.reduce((total, current) => total + current, 0);
+
+const average = numbers.length > 0 ? sum / numbers.length : 0;
+
+console.log(`Average: ${average}`);
   
 }
  
@@ -45,14 +67,14 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   if (employeesArray.length === 0) {
-    return null; // If the array is empty, return null
+    return null; 
 }
 
-// Generate a random index within the range of the array length
 const randomIndex = Math.floor(Math.random() * employeesArray.length);
 
 // Return the employee at the random index
 return employeesArray[randomIndex];
+
 }
 
 

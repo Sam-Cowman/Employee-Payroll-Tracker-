@@ -2,7 +2,7 @@
 
 ## Description
 
-This was created for businesses looking to track their employees pay. It keeps a log for the business and loads all names and salarys after that information had been entered. 
+This was created for businesses looking to track their employees pay. It keeps a log for the business and loads all names and salarys after that information had been entered. For the developer, this website shows the average employee salary in the console. 
 
 Code Highlights:
 
@@ -10,6 +10,13 @@ Code Highlights:
 * CSS styling 
 * CSS variables 
 * Javascript 
+* Conditional Statements 
+* Arrays
+* Javascript Iteration
+* Functions 
+* Objects
+
+
 
 Demo App [https://sam-cowman.github.io/Employee-Payroll-Tracker-/] (https://sam-cowman.github.io/Employee-Payroll-Tracker-/)
 

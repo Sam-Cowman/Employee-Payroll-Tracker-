@@ -34,33 +34,18 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-  // Use a template literal string 
+  // Will display average employee salary in console
   let numberEmployees = employeesArray.length;
 
   let input = 0
-  // confused 
-  // const numbers = Array.from({ length: Infinity }).reduce(function (acc, _, index) {
 
-  //   if (input === 'exit' || input === null) {
-  //     return acc;
-  //   } else {
-  //     acc.push(Number(input));
-  //     return acc;
-  //   }
-  // }, []);
+  // for loop checks if the index is less then employees array and if it's true will continue loop
   for(let i = 0; i < employeesArray.length; i++) {
     input += employeesArray[i].salary
     console.log(input)
   }
   console.log(input)
 
-  // console.log(numbers);
-  // const number = parseFloat(input);
-  // if (!isNaN(number)) {
-  //   numbers.push(number);
-  // } else {
-  //   alert("Please enter salary.");
-  // }
   let average = input / numberEmployees
   console.log(`The average salary is ${average.toFixed(2)}`)
 }
@@ -68,14 +53,10 @@ function sumFunction(total, current) {
   return total + current;
 }
 
-// const sum = numbers.reduce(sumFunction, 0);
-// const average = numbers.length > 0 ? sum / numbers.length : 0;
-
-
-
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
+  // Will display random selected employee in console 
   let employee = employeesArray[Math.floor(Math.random()*employeesArray.length)];
   console.log(`Random employee is ${employee.firstName} ${employee.lastName}`)
 }

@@ -36,16 +36,22 @@ const collectEmployees = function () {
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   // TODO: Calculate and display the average salary
-  // Use a tempelate literal string 
+  // Use a template literal string 
 
-  const numbers = [];
-// need to change this loop into something else 
   let input; 
-  while (true) {
-    input = prompt("Enter a number (or type 'exit' to finish):");
+  // confused 
+  const numbers = Array.from({ length: Infinity }).reduce(function(acc, _, index) {
+    const input = prompt(`Enter a number (or type 'exit' to finish):`);
+    
     if (input === 'exit' || input === null) {
-      break;
+        return acc;
+    } else {
+        acc.push(Number(input));
+        return acc;
     }
+}, []);
+
+console.log(numbers);
     const number = parseFloat(input);
     if (!isNaN(number)) { 
       numbers.push(number);
@@ -53,12 +59,14 @@ const displayAverageSalary = function (employeesArray) {
       alert("Please enter salary.");
     }
   }
-// get rid of carrot =
-  const sum = numbers.reduce((total, current) => total + current, 0);
+  function sumFunction(total, current) {
+    return total + current;
+}
 
+const sum = numbers.reduce(sumFunction, 0);
   const average = numbers.length > 0 ? sum / numbers.length : 0;
 
-  console.log(`Average: ${average}`);
+  console.log(`Average: ${average}`);{
 
 }
 
@@ -66,18 +74,9 @@ const displayAverageSalary = function (employeesArray) {
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
   // TODO: Select and display a random employee
-  if (employeesArray.length === 0) {
-    return null;
-  }
-
-  const randomIndex = Math.floor(Math.random() * employeesArray.length);
-
-  // Return the employee at the random index
-  return employeesArray[randomIndex];
+ 
 
 }
-
-
 /*
   ====================
   STARTER CODE

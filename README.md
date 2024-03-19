@@ -2,7 +2,7 @@
 
 ## Description
 
-This was created for businesses looking to track their employees pay. It keeps a log for the business and loads all names and salarys after that information had been entered. For the developer, this website shows the average employee salary in the console. 
+This was created for businesses looking to track their employees pay. It keeps a log for the business and loads all names and salarys after the information has been entered. For the developer, this website shows the average employee salary in the console. 
 
 Code Highlights:
 
